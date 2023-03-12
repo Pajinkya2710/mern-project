@@ -3,13 +3,11 @@ const app = express();
 const mongoose = require("mongoose");
 // const path = require("path");
 const cors = require("cors");
-// require("dotenv").config();
+require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 const profileRoutes = require("./routes/profileRoutes");
-// const path = require('path')
-const dotenv = require("dotenv");
-dotenv.config();
+// const path = 
 
 app.use(express.json());
 app.use(cors());
