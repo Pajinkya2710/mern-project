@@ -7,7 +7,7 @@ require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 const profileRoutes = require("./routes/profileRoutes");
-const path = require('path')
+// const path = require('path')
 
 
 app.use(express.json());
@@ -33,10 +33,10 @@ app.use("/api/profile", profileRoutes);
 // }
 
 // static 
-app.use(express.static(path.join(__dirname, "./frontend/build")))
-app.get('*', function(req, res){
-  res.sendFile(path.join(__dirname, "./frontend/build/index.html"))
-});
+// app.use(express.static(path.join(__dirname, "./frontend/build")))
+// app.get('*', function(req, res){
+//   res.sendFile(path.join(__dirname, "./frontend/build/index.html"))
+// });
 
 //port
 const port = process.env.PORT || 5000;
