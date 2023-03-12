@@ -7,14 +7,15 @@ require("dotenv").config();
 const authRoutes = require("./routes/authRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 const profileRoutes = require("./routes/profileRoutes");
-// const path = 
+
 
 app.use(express.json());
 app.use(cors());
 
 
-const mongoUrl = process.env.MONGODB_URL;
-mongoose.connect(mongoUrl, err => {
+// const mongoUrl = process.env.MONGODB_URL;
+MONGODB_URL="mongodb+srv://admin:admin@cluster0.xrkndh2.mongodb.net/mernproject?retryWrites=true&w=majority"
+mongoose.connect(MONGODB_URL, err => {
   if (err) throw err;
   console.log("Mongodb connected...");
 });
@@ -38,7 +39,8 @@ app.use("/api/profile", profileRoutes);
 // });
 
 //port
-const port = process.env.PORT || 5000;
+// const port = process.env.PORT || 5000;
+const port=5000;
 app.listen(port, () => {
   console.log(`Backend is running on port ${port}`);
 });
