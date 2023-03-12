@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app.js",
-    "build":"npm i"
+    "build":"npm install "
   },
   "keywords": [
     "Task manager",
