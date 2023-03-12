@@ -13,9 +13,9 @@ app.use(express.json());
 app.use(cors());
 
 
-// const mongoUrl = process.env.MONGODB_URL;
-MONGODB_URL="mongodb+srv://admin:admin@cluster0.xrkndh2.mongodb.net/mernproject?retryWrites=true&w=majority"
-mongoose.connect(MONGODB_URL, err => {
+const mongoUrl = process.env.MONGODB_URL;
+// MONGODB_URL="mongodb+srv://admin:admin@cluster0.xrkndh2.mongodb.net/mernproject?retryWrites=true&w=majority"
+mongoose.connect(mongoUrl, err => {
   if (err) throw err;
   console.log("Mongodb connected...");
 });
