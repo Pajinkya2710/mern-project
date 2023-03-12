@@ -41,7 +41,7 @@ app.use("/api/profile", profileRoutes);
 //port
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-  console.log(`Backend is running on port ${port}`);
+  console.log(`Backend is running on port 5000`);
 });
 
 
